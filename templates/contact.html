@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}SP
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3">
+
+<img class="d-block w-100 mx-0" src="https://source.unsplash.com/1600x600/?nike">
+</div>
+<div class="container mb-3 py-4">
+<h1 class="text-center my-3">Contact Us</h1>
+
+<form method="post" action="/contact">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone number</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone">
+  </div>
+    
+  
+  <div class="form-group">
+    <label for="desc">Reasons for contacting us...</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+<div class="mb-5 col-md-5" style="float: right; width: 30rem; margin: 0; ">
+
+<p><b>Address</b></p>
+
+<p>12/C 1-3rd Floor,Street 6, Badar Commercial<br>
+Saba Avenue, DHA Phase V Ext, Karachi-Pakistan</p>
+<p>Mobile: 92 322 2285554</p>
+<p>TEL: 92 21 37233283</p>
+<p>Email: khi01@structure.com.pk</p>
+
+</div>
+
+
+
+</div>
+
+
+
+{% endblock body %}
+
+
+
